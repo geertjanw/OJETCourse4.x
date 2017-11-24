@@ -52,23 +52,23 @@ References and code snippets applicable to the Oracle JET 4.x MOOC.
     * Title: Hybrid Mobile Application Development
 
 3. "Into the Clouds with Oracle JET": Miscellaneous Topics
-  * [Part-021](Part-021):
+  * [Part-01](lesson3/lesson3-part01.md):
     * Title: Integrating Other Components
-  * [Part-022](Part-022): 
+  * [Part-02](lesson3/lesson3-part02.md): 
     * Title: Interaction with Oracle Cloud Services
-  * Part-023:
+  * Part-03:(lesson3/lesson3-part03.md): 
     * Title: Accessibility
-  * [Part-024](Part-024): 
+  * [Part-04](lesson3/lesson3-part04.md): 
     * Title: Internationalization
-  * Part-025: 
+  * Part-05:(lesson3/lesson3-part05.md):  
     * Title: Testing and Debugging
-  * Part-026: 
+  * Part-06:(lesson3/lesson3-part06.md):  
     * Title: Performance
-  * Part-027: 
+  * Part-07:(lesson3/lesson3-part07.md):  
     * Title: Building
-  * Part-028: 
+  * Part-08:(lesson3/lesson3-part08.md):  
     * Title: Security
-  * Part-029: 
+  * Part-09:(lesson3/lesson3-part09.md):  
     * Title: Packaging and Deploying
-  * Part-030: 
+  * Part-10:(lesson3/lesson3-part10.md):  
     * Title: Contributing to the Oracle JET community
