@@ -6,7 +6,7 @@ References and code snippets applicable to the Oracle JET 4.x MOOC.
 
 1. "Taking Off with Oracle JET": Architecture, Modularity, and Data Binding
 
-  * [lesson1/lesson1-part01.md](Part-001): 
+  * [Part-001](lesson1/lesson1-part01.md): 
     * Title: Overview 
     * Description: The problem statement -- JavaScript file loading problems.
   * [Part-002](Part-002):
