@@ -1,2 +1,2 @@
-# Lesson 1 - Part 1
+# Lesson 2 - Part 6
 
