@@ -4,38 +4,31 @@ Materials for Oracle JET 4.x MOOC
 
 References and code snippets applicable to the Oracle JET 4.x MOOC.
 
+0. "Preparing to Take Off with Oracle JET": Getting Started
+
 1. "Taking Off with Oracle JET": Architecture, Modularity, and Data Binding
 
-  * [Part-001](lesson1/lesson1-part01.md): 
+  * [Part-01](lesson1/lesson1-part01.md): 
     * Title: Overview 
-    * Description: The problem statement -- JavaScript file loading problems.
-  * [Part-002](Part-002):
+  * [Part-02](lesson1/lesson1-part02.md):
     * Title: Modularity 
-    * Description: Introduction to AMD via Require.js.
-  * [Part-003](Part-003):
+  * [Part-03](lesson1/lesson1-part03.md):
     * Title: Advanced Modularity 
-    * Description: Understanding 'require.config'.
-  * [Part-004](Part-004):
+  * [Part-04](lesson1/lesson1-part04.md):
     * Title: Data Binding
     * Description: Including Knockout.js.
-  * [Part-005](Part-005): 
+  * [Part-05](lesson1/lesson1-part05.md): 
     * Title: Components
-    * Description: Creating and loading a Knockout component.
-  * [Part-006](Part-006): 
-    * Title: HTML Templates
-    * Description: Using 'requirejs-text.js' to separate out the HTML view.
-  * [Part-007](Part-007): 
-    * Title: Oracle JET
-    * Description: First usage of Oracle JET.
-  * [Part-008](Part-008): 
+  * [Part-06](lesson1/lesson1-part06.md): 
+    * Title: Loading Resources
+  * [Part-07](lesson1/lesson1-part07.md): 
+    * Title: Oracle JET Command Line Interface
+  * [Part-08](lesson1/lesson1-part08.md): 
     * Title: Oracle JET Modules
-    * Description: Creating Oracle JET modules.
-  * [Part-009](Part-009): 
+  * [Part-09](lesson1/lesson1-part09.md): 
     * Title: Oracle JET Components
-    * Description: Adding Oracle JET components.
-  * [Part-010](Part-010):
+  * [Part-10](lesson1/lesson1-part10.md):
     * Title: Oracle JET Layouts
-    * Description: Using FlexBox to Layout an Oracle JET application.
 
 2. "Exploring the Skies with Oracle JET": Features, Use Cases, and Scenarios
   * [Part-011](Part-011): 
