@@ -1,2 +1,2 @@
-# Lesson 1 - Part 8
+# Lesson 1 - Part 8: Oracle JET Modules
 
