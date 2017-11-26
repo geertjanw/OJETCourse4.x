@@ -2,4 +2,6 @@
 
 Homework research:
 
+   * [Oracle Alta UI design system](altaui.com)
+   * [FlexBox layout](https://www.w3schools.com/css/css3_flexbox.asp)
    * [Developer Guide: Designing Responsive Applications](https://docs.oracle.com/middleware/jet410/jet/developer/GUID-67956274-4056-4D54-8BC7-18942DA7338A.htm#JETDG263)
