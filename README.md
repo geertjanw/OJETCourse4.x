@@ -6,6 +6,8 @@ References and code snippets applicable to the Oracle JET 4.x MOOC.
 
 0. "Preparing to Take Off with Oracle JET": Getting Started
 
+  * [Welcome to the Oracle JET 4.x MOOC](WELCOME.md)
+
 1. "Taking Off with Oracle JET": Architecture, Modularity, and Data Binding
 
   * [Part-01](lesson1/lesson1-part01.md): 
@@ -56,19 +58,19 @@ References and code snippets applicable to the Oracle JET 4.x MOOC.
     * Title: Integrating Other Components
   * [Part-02](lesson3/lesson3-part02.md): 
     * Title: Interaction with Oracle Cloud Services
-  * Part-03:(lesson3/lesson3-part03.md): 
+  * [Part-03](lesson3/lesson3-part03.md): 
     * Title: Accessibility
   * [Part-04](lesson3/lesson3-part04.md): 
     * Title: Internationalization
-  * Part-05:(lesson3/lesson3-part05.md):  
+  * [Part-05](lesson3/lesson3-part05.md):  
     * Title: Testing and Debugging
-  * Part-06:(lesson3/lesson3-part06.md):  
+  * [Part-06](lesson3/lesson3-part06.md):  
     * Title: Performance
-  * Part-07:(lesson3/lesson3-part07.md):  
+  * [Part-07](lesson3/lesson3-part07.md):  
     * Title: Building
-  * Part-08:(lesson3/lesson3-part08.md):  
+  * [Part-08](lesson3/lesson3-part08.md):  
     * Title: Security
-  * Part-09:(lesson3/lesson3-part09.md):  
+  * [Part-09](lesson3/lesson3-part09.md):  
     * Title: Packaging and Deploying
-  * Part-10:(lesson3/lesson3-part10.md):  
+  * [Part-10](lesson3/lesson3-part10.md):  
     * Title: Contributing to the Oracle JET community
