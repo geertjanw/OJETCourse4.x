@@ -1,5 +1,9 @@
 # Lesson 1 - Part 1: Overview
 
+Video:
+
+https://www.youtube.com/watch?v=L2k_qylAtXs
+
 Homework research:
 
    * [Oracle JET site](oraclejet.org)
