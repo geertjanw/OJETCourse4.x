@@ -3,5 +3,5 @@
 Homework research:
 
    * Install [Node](https://nodejs.org/en/)
-   * Install [Oracle JET Get Started](http://oraclejet.org)
+   * Install Oracle JET command-line interface via [Oracle JET Get Started](http://oraclejet.org)
    * Install "HTML5/JavaScript" bundle of [NetBeans IDE](http://netbeans.org/downloads/)
