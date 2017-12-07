@@ -33,4 +33,34 @@ define(['ojs/ojcore'], function (oj) {
         }
     };
     return CountryFactory;
-}); ```
+});```
+
+```js #button { border: none; }
+define(['ojs/ojcore', 'knockout', 'jquery', 'factories/CountryFactory',
+    'ojs/ojtable', 'ojs/ojcollectiontabledatasource'],
+    function (oj, ko, $, CountryFactory) {
+        var viewModel = {
+            countryCollection: CountryFactory.createCountryCollection(),
+            datasource: ko.observable(),
+            // Called each time the view is shown to the user:
+            initialize: function () {
+                this.datasource(new oj.CollectionTableDataSource(this.countryCollection));
+                this.countryCollection.fetch();
+            }
+        };
+        return viewModel;
+    }
+);```
+
+```html #button { border: none; }
+&lt;div class="oj-hybrid-padding"&gt;
+    &lt;h1&gt;Customers Content Area&lt;/h1&gt;
+    &lt;oj-table id='table' aria-label='Departments Table'
+              data='[[datasource]]' 
+              columns-default.sortable='disabled' 
+              columns='[
+                 {"headerText": "Name", "field": "name"},
+                 {"headerText": "Population", "field": "population"},
+                 {"headerText": "Capital", "field": "capital"}]'&gt;
+    &lt;/oj-table&gt;
+&lt;/div&gt;```
