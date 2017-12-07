@@ -9,3 +9,28 @@ Homework research:
    * Cookbook: [Oracle JET Common Model](http://www.oracle.com/webfolder/technetwork/jet/jetCookbook.html?component=home&demo=rootFramework_childCommonModel)
    * Developer Guide: [Using the Common Model and Collection API](https://docs.oracle.com/middleware/jet410/jet/developer/GUID-2549871C-9658-4035-B461-A9136554BE74.htm#JETDG166)
 
+Source code:
+
+```js #button { border: none; }
+define(['ojs/ojcore'], function (oj) {
+    var CountryFactory = {
+        resourceUrl: 'https://restcountries.eu/rest/v2/all',
+        // Create a single country instance:
+        createCountryModel: function () {
+            var Country = oj.Model.extend({
+                urlRoot: this.resourceUrl, 
+                idAttribute: "name"
+            });
+            return new Country();
+        },
+        // Create a country collection:
+        createCountryCollection: function () {
+            var Countries = oj.Collection.extend({
+                url: this.resourceUrl, 
+                model: this.createCountryModel()
+            });
+            return new Countries();
+        }
+    };
+    return CountryFactory;
+}); ```
