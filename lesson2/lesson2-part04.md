@@ -12,6 +12,34 @@ Homework research:
 Source code:
 
 ```js #button { border: none; }
+define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojtable', 'ojs/ojarraytabledatasource'],
+        function (oj, ko, $) {
+            function AboutViewModel() {
+                var self = this;
+                self.data = ko.observableArray();
+                $.getJSON("https://restcountries.eu/rest/v2/all").
+                        then(function (countries) {
+                            var tempArray = [];
+                            $.each(countries, function () {
+                                tempArray.push({
+                                    name: this.name,
+                                    population: this.population,
+                                    capital: this.capital
+                                });
+                            });
+                            self.data(tempArray);
+                        });
+                self.datasource = new oj.ArrayTableDataSource(
+                        self.data,
+                        {idAttribute: 'name'}
+                );
+            }
+            return new AboutViewModel();
+        }
+);
+```
+
+```js #button { border: none; }
 define(['ojs/ojcore'], function (oj) {
     var CountryFactory = {
         resourceUrl: 'https://restcountries.eu/rest/v2/all',
