@@ -55,15 +55,15 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'factories/CountryFactory',
 ```
 
 ```html #button { border: none; }
-&lt;div class="oj-hybrid-padding"&gt;
-    &lt;h1&gt;Customers Content Area&lt;/h1&gt;
-    &lt;oj-table id='table' aria-label='Departments Table'
+<div class="oj-hybrid-padding">
+    <h1>Customers Content Area</h1>
+    <oj-table id='table' aria-label='Departments Table'
               data='[[datasource]]' 
               columns-default.sortable='disabled' 
               columns='[
                  {"headerText": "Name", "field": "name"},
                  {"headerText": "Population", "field": "population"},
-                 {"headerText": "Capital", "field": "capital"}]'&gt;
-    &lt;/oj-table&gt;
-&lt;/div&gt;
+                 {"headerText": "Capital", "field": "capital"}]'>
+    </oj-table>
+</div>
 ```
