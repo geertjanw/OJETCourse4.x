@@ -33,7 +33,8 @@ define(['ojs/ojcore'], function (oj) {
         }
     };
     return CountryFactory;
-});```
+});
+```
 
 ```js #button { border: none; }
 define(['ojs/ojcore', 'knockout', 'jquery', 'factories/CountryFactory',
@@ -50,7 +51,8 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'factories/CountryFactory',
         };
         return viewModel;
     }
-);```
+);
+```
 
 ```html #button { border: none; }
 &lt;div class="oj-hybrid-padding"&gt;
@@ -63,4 +65,5 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'factories/CountryFactory',
                  {"headerText": "Population", "field": "population"},
                  {"headerText": "Capital", "field": "capital"}]'&gt;
     &lt;/oj-table&gt;
-&lt;/div&gt;```
+&lt;/div&gt;
+```
