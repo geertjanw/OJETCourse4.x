@@ -7,3 +7,4 @@ Homework research:
    * [Switcher component](http://www.oracle.com/webfolder/technetwork/jet/jetCookbook.html?component=switcher&demo=basic)
    * [Film Strip component](http://www.oracle.com/webfolder/technetwork/jet/jetCookbook.html?component=filmStrip&demo=filmStripNavArrows)
    * [Binding & Control Flow](http://www.oracle.com/webfolder/technetwork/jet/jetCookbook.html?component=binding&demo=attr)
+   * [Masonry Layout](http://www.oracle.com/webfolder/technetwork/jet/jetCookbook.html?component=masonryLayout&demo=basicMasonryLayout)
