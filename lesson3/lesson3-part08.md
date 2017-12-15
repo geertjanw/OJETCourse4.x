@@ -1,4 +1,4 @@
-# Lesson 3 - Part 8
+# Lesson 3 - Part 8: Building
 
 Homework research:
 

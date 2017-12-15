@@ -1,4 +1,4 @@
-# Lesson 3 - Part 4
+# Lesson 3 - Part 4: Internationalization
 
 Homework research:
 

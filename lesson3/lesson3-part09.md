@@ -1,4 +1,4 @@
-# Lesson 3 - Part 9
+# Lesson 3 - Part 9: Packaging and Deployment
 
 Homework research:
 
