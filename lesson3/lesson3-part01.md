@@ -1,4 +1,4 @@
-# Lesson 3 - Part 1
+# Lesson 3 - Part 1: Composite Component Architecture
 
 Homework research:
 
