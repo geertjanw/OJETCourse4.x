@@ -2,22 +2,23 @@
 
 ## Three Day Oracle JET Workshop
 
-#### Day 1
+#### Day 1: Basics
 
    * Getting Started
    * Working with Oracle JET Components
    * Working with Oracle JET Composite Components
    
-#### Day 2
+#### Day 2: Data
    
    * Visualizing Data from a File
    * Visualizing Data from a REST Endpoint
    * Adding Responsive Design
    * Adding CRUD Functionality
    
-#### Day 3 
+#### Day 3: Miscellaneous
 
-   * Miscellaneous Topics
+   * Internationalization
+   * Exploring oraclejet.org
    
 ## Day 1   
 
