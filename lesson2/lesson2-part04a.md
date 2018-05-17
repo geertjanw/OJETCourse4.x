@@ -225,11 +225,71 @@ https://apex.oracle.com/pls/apex/oraclejet/emp/
 
 https://apex.oracle.com/pls/apex/oraclejet/m/emp/
 
+Instead of a chart, we will now use a table.
 
+1. In a ViewModel, e.g., in 'incidents.js', add the following:
+
+```js #button { border: none; }
+self.serviceURL = 'https://apex.oracle.com/pls/apex/oraclejet/emp/';
+
+self.EmpCol = ko.observable();
+
+self.datasource = ko.observable();
+
+self.Employee = oj.Model.extend({
+    urlRoot: self.serviceURL,
+    idAttribute: 'empno'
+});
+
+self.myProfile = new self.Employee();
+
+self.EmpCollection = oj.Collection.extend({
+    url: self.serviceURL,
+    model: self.myProfile,
+    comparator: "empno"
+});
+
+self.EmpCol(new self.EmpCollection());
+
+self.EmpCol().fetch();
+
+self.datasource(new oj.CollectionTableDataSource(self.EmpCol()));
+```
+
+2. In a View, e.g., in 'incidents.html', add the table HTML content:
+
+```html #button { border: none; }
+<oj-table id="table" 
+          style="min-width:100%" 
+          data="[[datasource]]" 
+          columns='[
+          { "headerText": "Employee Id", 
+            "field": "empno", 
+            "sortable": "enabled"},
+          { "headerText": "Employee Name", 
+            "field": "ename", 
+            "sortable": "enabled"},
+          { "headerText": "Job Title", 
+            "field": "job", 
+            "sortable": "enabled"},
+          { "headerText": "Dept Number", 
+            "field": "deptno", 
+            "sortable": "enabled"}]' 
+          selectionMode='{"row": "none", "column": "none"}'>
+</oj-table>
+```
+
+3. Load the required Oracle JET components in the 'define' block of the ViewModel.
+
+```js #button { border: none; }
+'ojs/ojtable', 'ojs/ojcollectiontabledatasource'
+```
+
+Now you should see the data from the REST endpoint in your table.
 
 ### Adding Responsive Design
 
-We'll create a table to display different data depending on the resolution:
+We'll create a new table, this time to display different data depending on the resolution:
 
 1. In the folder where 'main.js' is found, create 'responsiveUtils.js', to contain helpful media queries provided by Oracle JET:
 
