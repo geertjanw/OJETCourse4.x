@@ -63,6 +63,8 @@ In this scenario, also discuss the square braces vs. curly braces.
 
 Let's now take the chart and the combobo and turn them into a reusable CCA component.
 
+#### Getting Started
+
 1. In the Terminal, in the root of your project, run the following:
 
 ```js #button { border: none; }
@@ -82,7 +84,9 @@ ojet create component my-chart
 <my-chart></my-chart>
 ```
 
-6. In 'component.json', add a 'chartType' property:
+#### Setting Properties
+
+1. In 'component.json', add a 'chartType' property:
 
 ```js #button { border: none; }
 "properties": {
@@ -92,22 +96,22 @@ ojet create component my-chart
 },
 ```
 
-7. In 'dashboard.html', use the property in your 'my-chart' custom elements:
+2. In 'dashboard.html', use the property in your 'my-chart' custom elements:
 
 ```html #button { border: none; }
 <my-chart chart-type="bar"></my-chart>
 <my-chart chart-type="pie"></my-chart>
 ```
 
-8. In 'my-chart-viewmodel.js', create a new Knockout property that is initialized by the custom element's context, i.e., by 'bar' and by 'pie' in the two examples above:
+3. In 'my-chart-viewmodel.js', create a new Knockout property that is initialized by the custom element's context, i.e., by 'bar' and by 'pie' in the two examples above:
 
 ```js #button { border: none; }
 self.chartType = ko.observable(context.properties.chartType);
 ```
 
-9. In 'my-chart-view.html', change the value of the combobox to '{{chartType}}' and the type of the chart to '[[chartType]]'.
+4. In 'my-chart-view.html', change the value of the combobox to '{{chartType}}' and the type of the chart to '[[chartType]]'.
 
-10. Replace some of the other properties in the CCA component so that they can be set from the Dashboard module.
+5. Replace some of the other properties in the CCA component so that they can be set from the Dashboard module.
 
 ## Day 2
 
@@ -160,8 +164,7 @@ for (var i = 0; i < carSalesContent.length; i++) {
 ```html #button { border: none; }
 <my-chart
     chart-data="[[carsales]]"
-    chart-type="bar" 
-    chart-label="Car Sales"></my-chart>
+    chart-type="bar"></my-chart>
 ```
 
 In the browser, you should now see that the data is being loaded from a file. 
