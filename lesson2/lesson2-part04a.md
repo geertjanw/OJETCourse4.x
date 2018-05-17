@@ -35,6 +35,10 @@ ojet create BankAnalyzer --template=navdrawer
 ```
 3. Run the following in the terminal and look in the browser:
 
+```js #button { border: none; }
+ojet serve
+```
+
 4. Open your editor and eplore the source structure and learn about what everything does.
 
 5. Make a change in the 'Dashboard.html' file and notice what happens in the browser, without needing to refresh.
