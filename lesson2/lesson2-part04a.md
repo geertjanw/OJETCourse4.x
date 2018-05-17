@@ -229,6 +229,27 @@ https://apex.oracle.com/pls/apex/oraclejet/m/emp/
 
 ### Adding Responsive Design
 
+We'll create a table to display different data depending on the resolution:
+
+1. In the folder where 'main.js' is found, create 'responsiveUtils.js', to contain helpful media queries provided by Oracle JET:
+
+```js #button { border: none; }
+define(['ojs/ojcore'],
+    function (oj) {
+        function ResponsiveController() {
+            var self = this;
+            // Media queries for repsonsive layouts
+            var smQuery = oj.ResponsiveUtils.getFrameworkQuery(oj.ResponsiveUtils.FRAMEWORK_QUERY_KEY.SM_ONLY);
+            self.smScreen = oj.ResponsiveKnockoutUtils.createMediaQueryObservable(smQuery);
+            var mdQuery = oj.ResponsiveUtils.getFrameworkQuery(oj.ResponsiveUtils.FRAMEWORK_QUERY_KEY.MD_UP);
+            self.mdScreen = oj.ResponsiveKnockoutUtils.createMediaQueryObservable(mdQuery);
+        }
+        return new ResponsiveController();
+    });
+```   
+
+2. In a View, create a table:
+
 ```html #button { border: none; }
 <oj-table 
     id='table' 
@@ -238,6 +259,10 @@ https://apex.oracle.com/pls/apex/oraclejet/m/emp/
     style='width: 100%; height:100%;'>
 </oj-table>
 ```
+
+Notice that 'data' and 'columns' are going to be defined in the ViewModel.
+
+3. In the ViewModel, return values for the above based on the resolution:
 
 ```js #button { border: none; }
 self.dataprovider = ko.observable();
@@ -268,6 +293,17 @@ self.getCols = function () {
 
 self.getCols();
 ```
+
+4. Load the applicable components via the ViewModel 'define' block, and put 'ru' at the end of the callback function:
+
+```js #button { border: none; }
+'responsiveUtils',
+'ojs/ojtable',
+'ojs/ojcollectiontabledatasource',
+'ojs/ojarraydataprovider'
+```
+
+Resize the browser and notice that different columns are displayed depending on the resolution.
 
 ### Adding CRUD Functionality
 
