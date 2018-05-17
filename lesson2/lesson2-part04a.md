@@ -62,7 +62,7 @@ In this scenario, also discuss the square braces vs. curly braces.
 
 ### Working with Oracle JET Composite Components
 
-Let's now take the chart and the combobo and turn them into a reusable CCA component.
+Let's now take the chart and the combobox and turn them into a reusable CCA component.
 
 #### Getting Started
 
