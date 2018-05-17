@@ -45,9 +45,23 @@ ojet create BankAnalyzer --template=navdrawer
 
 http://www.oracle.com/webfolder/technetwork/jet/jetCookbook.html?component=dataVisualizations&demo=gallery
 
-3.
+3. Take a look at the Bar Chart:
+
+http://www.oracle.com/webfolder/technetwork/jet/jetCookbook.html?component=barChart&demo=default
+
+4. Look at the JS documentation, the description, variations, and tweak the code.
+
+5. Copy the HTML into the Dashboard View, the JavaScript into the Dashboard ViewModel, and reference the 'ojs/ojchart' in the define block of the Dashboard ViewModel. Look in the browser and see the Bar Chart is displayed.
+
+6. Change the 'bar' type to 'pie' by hand and then let the user do it by combining with a Combobox One:
+
+http://www.oracle.com/webfolder/technetwork/jet/jetCookbook.html?component=comboboxOne&demo=single
+
+In this scenario, also discuss the square braces vs. curly braces.
 
 ### Working with Oracle JET Composite Components
+
+Let's now take the chart and the combobo and turn them into a reusable CCA component.
 
 1. In the Terminal, in the root of your project, run the following:
 
@@ -59,7 +73,41 @@ ojet create component my-chart
 
 3. Load the loader into the ViewModel, declare the new custom element in the View, then look in the browser and notice the message from the CCA component.
 
-4. Move 
+4. Move the chart and the combobox into the 'my-chart' CCA component.
+
+5. Declare the 'my-chart' custom element a few more times and notice that you now see multiple charts.
+
+```html #button { border: none; }
+<my-chart></my-chart>
+<my-chart></my-chart>
+```
+
+6. In 'component.json', add a 'chartType' property:
+
+```js #button { border: none; }
+"properties": {
+    "chartType": {
+        "type": "string"
+    }
+},
+```
+
+7. In 'dashboard.html', use the property in your 'my-chart' custom elements:
+
+```html #button { border: none; }
+<my-chart chart-type="bar"></my-chart>
+<my-chart chart-type="pie"></my-chart>
+```
+
+8. In 'my-chart-viewmodel.js', create a new Knockout property that is initialized by the custom element's context, i.e., by 'bar' and by 'pie' in the two examples above:
+
+```js #button { border: none; }
+self.chartType = ko.observable(context.properties.chartType);
+```
+
+9. In 'my-chart-view.html', change the value of the combobox to '{{chartType}}' and the type of the chart to '[[chartType]]'.
+
+10. Replace some of the other properties in the CCA component so that they can be set from the Dashboard module.
 
 ## Day 2
 
