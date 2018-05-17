@@ -112,7 +112,7 @@ self.chartType = ko.observable(context.properties.chartType);
 
 4. In 'my-chart-view.html', change the value of the combobox to '{{chartType}}' and the type of the chart to '[[chartType]]'.
 
-5. Replace some of the other properties in the CCA component so that they can be set from the Dashboard module.
+5. After the above works correctly, replace some of the other properties in the CCA component so that they can be set from the Dashboard module.
 
 #### Using Arrays in Properties
 
