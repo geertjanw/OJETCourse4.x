@@ -219,9 +219,13 @@ In the browser, you should now see that the data is being loaded from a file.
 
 ### Visualizing Data from a REST Endpoint
 
+We'll use these REST endpoints, one for large resolution and the other for small devices, e.g., mobile phones, which have less real estate so we should make a smaller subset of data available:
+
 https://apex.oracle.com/pls/apex/oraclejet/emp/
 
 https://apex.oracle.com/pls/apex/oraclejet/m/emp/
+
+### Adding CRUD Functionality
 
 ## Day 3   
 
