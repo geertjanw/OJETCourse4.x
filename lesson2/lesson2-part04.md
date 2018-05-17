@@ -9,7 +9,9 @@ Homework research:
    * Cookbook: [Oracle JET Common Model](http://www.oracle.com/webfolder/technetwork/jet/jetCookbook.html?component=home&demo=rootFramework_childCommonModel)
    * Developer Guide: [Using the Common Model and Collection API](https://docs.oracle.com/middleware/jet410/jet/developer/GUID-2549871C-9658-4035-B461-A9136554BE74.htm#JETDG166)
 
-Source code:
+## Source code
+
+ViewModel with jQuery:
 
 ```js #button { border: none; }
 define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojtable', 'ojs/ojarraytabledatasource'],
@@ -39,6 +41,8 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojtable', 'ojs/ojarraytabledata
 );
 ```
 
+Factory with Oracle JET Common Model:
+
 ```js #button { border: none; }
 define(['ojs/ojcore'], function (oj) {
     var CountryFactory = {
@@ -64,6 +68,8 @@ define(['ojs/ojcore'], function (oj) {
 });
 ```
 
+ViewModel loading the Factory and referencing it:
+
 ```js #button { border: none; }
 define(['ojs/ojcore', 'knockout', 'jquery', 'factories/CountryFactory',
     'ojs/ojtable', 'ojs/ojcollectiontabledatasource'],
@@ -81,6 +87,8 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'factories/CountryFactory',
     }
 );
 ```
+
+View that works with either of the ViewModels above:
 
 ```html #button { border: none; }
 <div class="oj-hybrid-padding">
