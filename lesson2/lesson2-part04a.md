@@ -12,6 +12,7 @@
    
    * Visualizing Data from a File
    * Visualizing Data from a REST Endpoint
+   * Adding Responsive Design
    * Adding CRUD Functionality
    
 #### Day 3 
