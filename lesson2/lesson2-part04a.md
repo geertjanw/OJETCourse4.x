@@ -113,6 +113,54 @@ self.chartType = ko.observable(context.properties.chartType);
 
 5. Replace some of the other properties in the CCA component so that they can be set from the Dashboard module.
 
+#### Using Arrays in Properties
+
+1. In 'component.json', define a new property, this time an 'array', to work with the 'series' property of the chart:
+
+```js #button { border: none; }
+"properties": {
+    "chartType": {
+        "type": "string"
+    },
+    "chartData": {
+        "type": "array"
+    }
+},
+```
+
+2. In 'dashboard.html', use the property, by referencing a display-only variable to be defined in the 'dashboard.js':
+
+```html #button { border: none; }
+<my-chart
+    chart-data="[[carsales]]"
+    chart-type="bar"></my-chart>
+```
+
+3. In 'dashboard.js', define the variable referenced above:
+
+```js #button { border: none; }
+self.carsales = [
+    {name: "Honda", items: [12, 24]},
+    {name: "Volvo", items: [95, 39]},
+    {name: "Mazda", items: [16, 52]},
+    {name: "Mercedes", items: [32, 26]},
+    {name: "Jaguar", items: [82, 36]}];
+```
+
+4. In 'my-chart-viewModel.js', set a property that is defined by the 'my-chart' custom element:
+
+```js #button { border: none; }
+self.chartData = context.properties.chartData;
+```
+
+5. Reference the property above in the 'my-chart-view.html' file, in the 'series' property of the chart:
+
+```html #button { border: none; }
+series="[[chartData]]"
+```
+
+In the browser, you should see that your data can now be defined per 'my-chart' custom element, rather than being hardcoded in the CCA component.
+
 ## Day 2
 
 Today, we will focus on displaying and manipulating data.
