@@ -225,6 +225,50 @@ https://apex.oracle.com/pls/apex/oraclejet/emp/
 
 https://apex.oracle.com/pls/apex/oraclejet/m/emp/
 
+
+
+### Adding Responsive Design
+
+```html #button { border: none; }
+<oj-table 
+    id='table' 
+    aria-label='Employees Table'
+    data='[[dataprovider]]' 
+    columns='[[dynamicCols]]'
+    style='width: 100%; height:100%;'>
+</oj-table>
+```
+
+```js #button { border: none; }
+self.dataprovider = ko.observable();
+self.dynamicCols = ko.observableArray([]);
+
+function getUrl() {
+    if (ru.mdScreen()) {
+        url = "https://apex.oracle.com/pls/apex/oraclejet/emp/";
+    } else {
+        url = "https://apex.oracle.com/pls/apex/oraclejet/m/emp/";
+    }
+    return url;
+}
+
+self.getCols = function () {
+    var url = getUrl();
+    $.getJSON(url).then(function (data) {
+        var tempCols = [];
+        for (var property in data.items[0]) {
+            if (data.items[0].hasOwnProperty(property)) {
+                tempCols.push({headerText: property, field: property});
+            }
+        }
+        self.dynamicCols(tempCols);
+        self.dataprovider(new oj.ArrayDataProvider(data.items, {idAttribute: 'empno'}));
+    });
+};
+
+self.getCols();
+```
+
 ### Adding CRUD Functionality
 
 ## Day 3   
