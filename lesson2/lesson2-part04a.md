@@ -20,6 +20,47 @@
    
 ## Day 1   
 
+### Getting Started
+
+1. Follow the instruction on the Getting Started page to install the ojet-cli:
+
+http://www.oracle.com/webfolder/technetwork/jet/globalGetStarted.html
+
+2. Run the following in the terminal:
+
+```js #button { border: none; }
+ojet create BankAnalyzer --template=navdrawer
+```
+3. Run the following in the terminal and look in the browser:
+
+4. Open your editor and eplore the source structure.
+
+5. Make a change in the 'Dashboard.html' file and notice what happens in the browser, without needing to refresh.
+
+### Working with Oracle JET Components
+
+1. Explore the Oracle JET Cookbook.
+
+2. Especially explore the data visualization use cases:
+
+http://www.oracle.com/webfolder/technetwork/jet/jetCookbook.html?component=dataVisualizations&demo=gallery
+
+3.
+
+### Working with Oracle JET Composite Components
+
+1. In the Terminal, in the root of your project, run the following:
+
+```js #button { border: none; }
+ojet create component my-chart
+```
+
+2. Take a look at your source structure and find the new 'my-chart' CCA component.
+
+3. Load the loader into the ViewModel, declare the new custom element in the View, then look in the browser and notice the message from the CCA component.
+
+4. Move 
+
 ## Day 2
 
 Today, we will focus on displaying and manipulating data.
@@ -84,6 +125,10 @@ https://apex.oracle.com/pls/apex/oraclejet/emp/
 https://apex.oracle.com/pls/apex/oraclejet/m/emp/
 
 ## Day 3   
+
+### Internationalization
+
+### Explore the Oracle JET Website oraclejet.org
 
 
 
