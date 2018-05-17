@@ -22,6 +22,16 @@
 
 ## Day 2
 
+### Visualizing Data from a File
+
+'text!../data/carsales.json'
+
+### Visualizing Data from a REST Endpoint
+
+https://apex.oracle.com/pls/apex/oraclejet/emp/
+
+https://apex.oracle.com/pls/apex/oraclejet/m/emp/
+
 ## Day 3   
 
 
