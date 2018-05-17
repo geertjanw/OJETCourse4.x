@@ -367,11 +367,15 @@ Resize the browser and notice that different columns are displayed depending on 
 
 ### Adding CRUD Functionality
 
+Follow the instructions here:
+
+http://www.oracle.com/webfolder/technetwork/jet/jetCookbook.html?component=crud&demo=table
+
 ## Day 3   
 
-### Internationalization
+#### Internationalization
 
-### Explore the Oracle JET Website oraclejet.org
+#### Explore the Oracle JET Website oraclejet.org
 
 
 
