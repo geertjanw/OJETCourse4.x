@@ -4,9 +4,9 @@
 
 ### Day 1
 
-   # Getting Started
-   # Working with Oracle JET Components
-   # Working with Oracle JET Composite Components
+   * Getting Started
+   * Working with Oracle JET Components
+   * Working with Oracle JET Composite Components
    
 ### Day 2
    
@@ -18,7 +18,13 @@
 
    * Miscellaneous Topics
    
-## Getting Started   
+## Day 1   
+
+## Day 2
+
+## Day 3   
+
+
 
 
 
