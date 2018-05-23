@@ -293,7 +293,6 @@ self.currentRowListener = function (event, data) {
             then(function (rowObj) {
                 var obj = rowObj['data'];
                 $('#selectedName').text(obj.ename);
-                console.log(self.selectedName);
             });
 };
 ```
