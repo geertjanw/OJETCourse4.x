@@ -280,54 +280,9 @@ self.datasource(new oj.CollectionTableDataSource(self.EmpCol()));
 
 Now you should see the data from the REST endpoint in your table.
 
-### Removing a row from the table
-
-1. Add a column at the table for removing a row:
-
-```js #button { border: none; }
-{"headerText": "Remove", "id": "column1", "sortable": "disabled"},
-```
-
-2. Add a script at the end of the view for rendering rows:
-
-```html #button { border: none; }
-<script type="text/html" id="row_tmpl">    
-  <tr>
-    <td>
-      <oj-checkboxset aria-hidden='true' 
-                      on-value-changed="[[$parent.enableDelete]]" 
-                      class='oj-checkboxset-no-chrome'>
-        <oj-option data-bind="attr:{id: ename}" value="[[ename]]"></oj-option>
-      </oj-checkboxset>
-    </td>
-    <td><div id='ename' data-bind="text: ename"></div></td>
-    <td><div id="job" data-bind="text: job"></div></td>
-  </tr>
-</script>
-```
-
-3. Add a row renderer to the table:
-
-```html #button { border: none; }
-row-renderer='[[oj.KnockoutTemplateUtils.getRenderer("row_tmpl", true)]]'
-```
-
-4. Reference the required Oracle JET component in the 'define' block:
-
-```js #button { border: none; }
-'ojs/ojcheckboxset'
-```
-
-5. Enable deletion, which is done when the value of the checkbox changes:
-
-self.somethingChecked = ko.observable(false);
-self.enableDelete = function(event) {
-    self.somethingChecked(event && event.target && event.target.value && event.target.value.length);
-}
-
 ### Adding Responsive Design
 
-We'll create a new table, this time to display different data depending on the resolution:
+We'll create another table, different to the one above, this time to display different data depending on the resolution:
 
 1. In the folder where 'main.js' is found, create 'responsiveUtils.js', to contain helpful media queries provided by Oracle JET:
 
@@ -405,15 +360,11 @@ Resize the browser and notice that different columns are displayed depending on 
 
 ### Adding CRUD Functionality
 
-Details to be done. Follow the instructions here:
+Follow the instructions here:
 
 http://www.oracle.com/webfolder/technetwork/jet/jetCookbook.html?component=crud&demo=table
 
-## Day 3   
 
-#### Internationalization
-
-#### Explore the Oracle JET Website oraclejet.org
 
 
 
