@@ -229,7 +229,11 @@ https://apex.oracle.com/pls/apex/oraclejet/m/emp/
 
 Instead of a chart, we will now use a table.
 
-1. In a ViewModel, e.g., 'employees.js', model your data using BackBone syntax:
+1. Read the JS documentation for ojTable:
+
+http://www.oracle.com/webfolder/technetwork/jet/jsdocs/oj.ojTable.html
+
+2. In a ViewModel, e.g., 'employees.js', model your data using BackBone syntax:
 
 ```js #button { border: none; }
 self.serviceURL = 'https://apex.oracle.com/pls/apex/oraclejet/emp/';
@@ -255,13 +259,13 @@ self.EmpCol().fetch();
 self.datasource(new oj.CollectionTableDataSource(self.EmpCol()));
 ```
 
-2. Reference the components you need in the 'define' block of the ViewModel:
+3. Reference the components you need in the 'define' block of the ViewModel:
 
 ```js #button { border: none; }
 'ojs/ojtable', 'ojs/ojcollectiontabledatasource'
 ```
 
-3. Copy the table into a View:
+4. Copy the table into a View:
 
 ```html #button { border: none; }
  <oj-table id="table" data="[[datasource]]"
@@ -273,18 +277,21 @@ self.datasource(new oj.CollectionTableDataSource(self.EmpCol()));
           selectionMode='{"row": "none", "column": "none"}'>
 </oj-table>
 ```
-
 Now you should see the data from the REST endpoint in your table.
 
 ### Selecting a Row in the Table
 
-1. In the ojTable in the View:
+1. Read the JS documentation for ojTable:
+
+http://www.oracle.com/webfolder/technetwork/jet/jsdocs/oj.ojTable.html
+
+2. In the ojTable in the View:
 
 ```html #button { border: none; }
 on-oj-before-current-row='[[currentRowListener]]'
 ```
 
-2. In the ViewModel:
+3. In the ViewModel:
 
 ```js #button { border: none; }
 self.currentRowListener = function (event, data) {
@@ -298,7 +305,7 @@ self.currentRowListener = function (event, data) {
 };
 ```
 
-3. In the View, to display the selected name:
+4. In the View, to display the selected name:
 
 ```js #button { border: none; }
 Selected: <span id="selectedName"></span>
