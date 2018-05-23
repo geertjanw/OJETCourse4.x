@@ -229,7 +229,11 @@ https://apex.oracle.com/pls/apex/oraclejet/m/emp/
 
 Instead of a chart, we will now use a table.
 
-1. Read the JS documentation for ojTable:
+1. Explore this section in the Cookbook:
+
+http://www.oracle.com/webfolder/technetwork/jet/jetCookbook.html?component=crud&demo=table
+
+2. Read the JS documentation for ojTable:
 
 http://www.oracle.com/webfolder/technetwork/jet/jsdocs/oj.ojTable.html
 
