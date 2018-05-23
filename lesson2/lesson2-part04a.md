@@ -171,7 +171,7 @@ Today, we will focus on displaying and manipulating data.
 
 In the first scenario, we move our hardcoded data from the CCA component into a JSON file. From there, we load the data into our ViewModel, parse it, and then push it into a variable referenced in our view.
 
-1. Move the data into a file named 'carsales.json', in 'js/data'. Here's what its content should look like:
+1. Move the data into a file named 'carsales.json', in a new folder named 'data', 'src/js'. Here's what its content should look like:
 
 ```js #button { border: none; }
 [
