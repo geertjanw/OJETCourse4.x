@@ -15,11 +15,6 @@
    * Adding Responsive Design
    * Adding CRUD Functionality
    
-#### Day 3: Miscellaneous
-
-   * Internationalization
-   * Exploring oraclejet.org
-   
 ## Day 1   
 
 ### Getting Started
