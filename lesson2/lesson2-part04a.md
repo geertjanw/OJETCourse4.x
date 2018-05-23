@@ -383,7 +383,7 @@ Resize the browser and notice that different columns are displayed depending on 
 
 ### Adding CRUD Functionality
 
-Follow the instructions here:
+Explore this section in the Cookbook:
 
 http://www.oracle.com/webfolder/technetwork/jet/jetCookbook.html?component=crud&demo=table
 
