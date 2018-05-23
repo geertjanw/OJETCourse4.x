@@ -275,6 +275,35 @@ self.datasource(new oj.CollectionTableDataSource(self.EmpCol()));
 
 Now you should see the data from the REST endpoint in your table.
 
+### Selecting a row in the table
+
+1. In the ojTable in the View:
+
+```html #button { border: none; }
+on-oj-before-current-row='[[currentRowListener]]'
+```
+
+2. In the ViewModel:
+
+```js #button { border: none; }
+self.currentRowListener = function (event, data) {
+    var newCurrentRow = event.detail.currentRow;
+    console.log(newCurrentRow);
+    self.datasource().at(newCurrentRow['rowIndex']).
+            then(function (rowObj) {
+                var obj = rowObj['data'];
+                $('#selectedName').text(obj.ename);
+                console.log(self.selectedName);
+            });
+};
+```
+
+3. In the View, to display the selected name:
+
+```js #button { border: none; }
+Selected: <span id="selectedName"></span>
+```
+
 ### Adding Responsive Design
 
 We'll create another table, different to the one above, this time to display different data depending on the resolution:
