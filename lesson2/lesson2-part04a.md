@@ -12,6 +12,7 @@
    
    * Visualizing Data from a File
    * Visualizing Data from a REST Endpoint
+   * Selecting a Row in the Table
    * Adding Responsive Design
    * Adding CRUD Functionality
    
@@ -275,7 +276,7 @@ self.datasource(new oj.CollectionTableDataSource(self.EmpCol()));
 
 Now you should see the data from the REST endpoint in your table.
 
-### Selecting a row in the table
+### Selecting a Row in the Table
 
 1. In the ojTable in the View:
 
