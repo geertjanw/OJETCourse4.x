@@ -233,13 +233,11 @@ https://apex.oracle.com/pls/apex/oraclejet/m/emp/
 
 Instead of a chart, we will now use a table.
 
-1. In a ViewModel, e.g., in 'incidents.js', add the following:
+1. In a ViewModel, e.g., 'employees.js', model your data using BackBone syntax:
 
 ```js #button { border: none; }
 self.serviceURL = 'https://apex.oracle.com/pls/apex/oraclejet/emp/';
-
 self.EmpCol = ko.observable();
-
 self.datasource = ko.observable();
 
 self.Employee = oj.Model.extend({
@@ -248,11 +246,10 @@ self.Employee = oj.Model.extend({
 });
 
 self.myProfile = new self.Employee();
-
 self.EmpCollection = oj.Collection.extend({
     url: self.serviceURL,
     model: self.myProfile,
-    comparator: "empno"
+    comparator: 'ename'
 });
 
 self.EmpCol(new self.EmpCollection());
@@ -262,33 +259,23 @@ self.EmpCol().fetch();
 self.datasource(new oj.CollectionTableDataSource(self.EmpCol()));
 ```
 
-2. In a View, e.g., in 'incidents.html', add the table HTML content:
-
-```html #button { border: none; }
-<oj-table id="table" 
-          style="min-width:100%" 
-          data="[[datasource]]" 
-          columns='[
-          { "headerText": "Employee Id", 
-            "field": "empno", 
-            "sortable": "enabled"},
-          { "headerText": "Employee Name", 
-            "field": "ename", 
-            "sortable": "enabled"},
-          { "headerText": "Job Title", 
-            "field": "job", 
-            "sortable": "enabled"},
-          { "headerText": "Dept Number", 
-            "field": "deptno", 
-            "sortable": "enabled"}]' 
-          selectionMode='{"row": "none", "column": "none"}'>
-</oj-table>
-```
-
-3. Load the required Oracle JET components in the 'define' block of the ViewModel.
+2. Reference the components you need in the 'define' block of the ViewModel:
 
 ```js #button { border: none; }
 'ojs/ojtable', 'ojs/ojcollectiontabledatasource'
+```
+
+3. Copy the table into a View:
+
+```html #button { border: none; }
+ <oj-table id="table" data="[[datasource]]"
+          columns='[
+          {"headerText": "Name",
+          "field": "ename", "sortable": "enabled"},
+          {"headerText": "Job",
+          "field": "job", "sortable": "enabled"}]'
+          selectionMode='{"row": "none", "column": "none"}'>
+</oj-table>
 ```
 
 Now you should see the data from the REST endpoint in your table.
