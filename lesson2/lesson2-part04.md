@@ -73,19 +73,17 @@ ViewModel loading the Factory and referencing it:
 ```js #button { border: none; }
 define(['ojs/ojcore', 'knockout', 'jquery', 'factories/CountryFactory',
     'ojs/ojtable', 'ojs/ojcollectiontabledatasource'],
-    function (oj, ko, $, CountryFactory) {
-        var viewModel = {
-            countryCollection: CountryFactory.createCountryCollection(),
-            datasource: ko.observable(),
-            // Called each time the view is shown to the user:
-            initialize: function () {
-                this.datasource(new oj.CollectionTableDataSource(this.countryCollection));
-                this.countryCollection.fetch();
-            }
-        };
-        return viewModel;
-    }
-);
+        function (oj, ko, $, CountryFactory) {
+
+            function AboutViewModel() {
+                var self = this;
+                self.countryCollection = CountryFactory.createCountryCollection();
+                self.datasource = ko.observable();
+                self.datasource(new oj.CollectionTableDataSource(this.countryCollection));
+                ...
+                ...
+                ...
+                
 ```
 
 View that works with either of the ViewModels above:
